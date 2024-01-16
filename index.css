@@ -1,0 +1,14 @@
+.user-item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.user-item-grid .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.user-item-grid .item img {
+  object-fit: cover;
+  max-height: 200px;
+}
