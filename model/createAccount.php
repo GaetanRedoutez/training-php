@@ -29,7 +29,7 @@ function createAccount()
       $res = $req->execute();
 
       if ($res) {
-        return '<a href="index.php?page=user">Compte crée avec succès ! Se connecter ?</a>';
+        return '<p>Compte crée avec succès ! 😁<a href="index.php?page=login">Se connecter ?</a><p>';
       } else {
         return 'Echec de la création 😭';
       }

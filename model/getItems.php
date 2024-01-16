@@ -8,5 +8,7 @@ function getItems()
   $req = $db->prepare('SELECT * FROM items');
   $req->execute();
 
+  $req->setFetchMode(PDO::FETCH_ASSOC);
+
   return  $req->fetchAll();
 }

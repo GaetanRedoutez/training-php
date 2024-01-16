@@ -2,6 +2,7 @@
 require_once('./controller/home.php');
 require_once('./controller/user.php');
 require_once('./controller/add-item.php');
+require_once('./controller/modify-item.php');
 require_once('./controller/login.php');
 require_once('./controller/signup.php');
 require_once('./controller/items.php');
@@ -14,6 +15,8 @@ if (isset($_GET['page']) && $_GET['page'] != '') {
     if (isset($_GET['redirect']) && $_GET['redirect'] != '') {
       if ($_GET['redirect'] === 'add-item') {
         addItem();
+      } elseif ($_GET['redirect'] === 'modify-item') {
+        modify();
       }
     } else {
       user();

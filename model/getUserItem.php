@@ -9,5 +9,7 @@ function getUserItem($userId)
   $req->bindValue(':user_id', $userId);
   $res = $req->execute();
 
+  $req->setFetchMode(PDO::FETCH_ASSOC);
+
   return  $req->fetchAll();
 }
