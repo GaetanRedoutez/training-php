@@ -2,9 +2,10 @@
 $title = 'Ajouter un article';
 ob_start();
 print_r($_SESSION['item']);
+$formAction = "index.php?page=user&redirect=modify-item&id=" . $_SESSION['item']['item_id'];
 ?>
 
-<form action="index.php?page=user&redirect=modify-item" method="post" enctype="multipart/form-data">
+<form action=<?= $formAction ?> method="post" enctype="multipart/form-data">
   <fieldset>
     <legend>
       <h1>Modifier votre article !</h1>
@@ -26,7 +27,7 @@ print_r($_SESSION['item']);
       <option value="Divers" <?php echo ($_SESSION['item']['item_category'] === 'Divers') ? 'selected' : ''; ?>>Divers</option>
     </select>
 
-    <input type="submit" name="modifiy-item" value="Modifier">
+    <input type="submit" name="modify-item" value="Modifier">
     <input type="submit" name="delete-item" value="Supprimer">
   </fieldset>
 </form>
