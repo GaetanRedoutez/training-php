@@ -11,7 +11,7 @@ function user()
 
     echo '<div class="user-item-grid">';
     foreach ($items as $item) {
-      displayItem($item);
+      displayItem($item, true);
     }
     echo '</div>';
   } else {
