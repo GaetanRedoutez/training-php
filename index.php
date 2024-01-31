@@ -33,9 +33,3 @@ if (isset($_GET['page']) && $_GET['page'] != '') {
 } else {
   home();
 }
-echo "<br> session_status : ";
-var_dump(session_status());
-echo "<br> session_id : ";
-var_dump(session_id());
-echo "<br> session_name : ";
-var_dump(session_name());

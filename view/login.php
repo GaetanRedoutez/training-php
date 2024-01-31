@@ -4,19 +4,25 @@ ob_start();
 ?>
 
 <form action="index.php?page=login" method="post" rel="login-form">
-  <fieldset>
-    <legend>
-      <h1>Connectez vous</h1>
-    </legend>
-    <label for="mail">Email</label>
-    <input type="email" id="email" name="email" placeholder="Type your mail here" size="50" maxlength="50">
-    <label for="pwd">Mot de passe </label>
-    <input type="password" id="password" name="password" placeholder="Type your password here" size="50" maxlength="50">
-    <input type="submit" name="connect" value="Se connecter">
-  </fieldset>
+  <div class="row g-3">
+    <div class="row mb-3">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" name="email" id="email" placeholder="Type your mail here" class="form-control form-control-sm" data-np-intersection-state="visible">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="pwd" class="col-sm-2 col-form-label">Mot de passe </label>
+      <div class="col-sm-10">
+        <input type="password" id="password" name="password" placeholder="Type your password here" class="form-control form-control-sm" data-np-intersection-state="visible">
+      </div>
+    </div>
+  </div>
+  <input type="submit" name="connect" value="Se connecter" class="btn btn-primary">
+  <a href="index.php?page=signup" class="btn btn-secondary">Créer un compte</a>
 </form>
 
-<a href="index.php?page=signup">Créer un compte</a>
+
 
 
 <?php $content = ob_get_clean();

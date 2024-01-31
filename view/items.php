@@ -2,8 +2,9 @@
 ob_start();
 ?>
 
-<h1>🎮Page article🎮</h1>
-<p>Ici nous avons tous nos articles </p>
+<div class="row text-center">
+  <h1 class="col p-3 border-bottom">🎮Article🎮</h1>
+</div>
 
 <?php $content = ob_get_clean();
 require('./view/template/layout.php');
